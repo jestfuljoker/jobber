@@ -15,7 +15,7 @@ async function bootstrap() {
 
 	app.setGlobalPrefix(globalPrefix);
 
-	const port = configService.getOrThrow('AUTH_PORT');
+	const port = configService.getOrThrow('PORT');
 
 	await app.listen(port);
 

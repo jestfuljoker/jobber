@@ -1,4 +1,5 @@
 import { Injectable } from '@nestjs/common';
+import { Prisma } from '@prisma-clients/auth';
 import { hash } from 'bcryptjs';
 
 import { PrismaService } from '~/app/prisma/prisma.service';
@@ -22,5 +23,9 @@ export class UsersService {
 
 	async getUsers(): Promise<User[]> {
 		return this.prismaService.user.findMany();
+	}
+
+	async getUser(args: Prisma.UserWhereUniqueInput) {
+		return this.prismaService.user.findUniqueOrThrow({ where: args });
 	}
 }
