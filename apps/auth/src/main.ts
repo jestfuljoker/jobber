@@ -1,4 +1,5 @@
 import { Logger, ValidationPipe } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 
 import { AppModule } from '~/app/app.module';
@@ -6,13 +7,15 @@ import { AppModule } from '~/app/app.module';
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule);
 
+	const configService = app.get(ConfigService);
+
 	app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
 
 	const globalPrefix = 'api';
 
 	app.setGlobalPrefix(globalPrefix);
 
-	const port = process.env.PORT || 3000;
+	const port = configService.getOrThrow('AUTH_PORT');
 
 	await app.listen(port);
 
