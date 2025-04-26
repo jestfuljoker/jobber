@@ -12,6 +12,11 @@ import { JobsModule } from '~/app/jobs/jobs.module';
 		GraphQLModule.forRoot<ApolloDriverConfig>({
 			autoSchemaFile: true,
 			driver: ApolloDriver,
+			playground: {
+				settings: {
+					'request.credentials': 'include',
+				},
+			},
 		}),
 	],
 })
