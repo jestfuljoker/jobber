@@ -8,7 +8,8 @@
 		"build": {
 			"executor": "nx:run-commands",
 			"dependsOn": [
-				"generate-types"
+				"generate-prisma",
+				"generate-ts-proto"
 			],
 			"options": {
 				"command": "webpack-cli build",
@@ -45,20 +46,27 @@
 		},
 		"test": {
 			"dependsOn": [
-				"generate-types"
+				"generate-prisma"
 			]
 		},
-		"generate-types": {
+		"generate-prisma": {
 			"command": "prisma generate",
 			"options": {
-				"cwd": "apps/auth"
-			}
+				"cwd": "{projectRoot}",
+				"input": [
+					"prisma/schema.prisma"
+				]
+			},
+			"cache": true
 		},
 		"migrate-prisma": {
 			"command": "prisma migrate dev",
 			"options": {
-				"cwd": "apps/auth"
+				"cwd": "{projectRoot}"
 			}
+		},
+		"generate-ts-proto": {
+			"command": "nx generate-ts-proto"
 		}
 	}
 }
