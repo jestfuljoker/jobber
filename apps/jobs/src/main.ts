@@ -11,8 +11,8 @@ async function bootstrap() {
 	const configService = app.get(ConfigService);
 	const globalPrefix = 'api';
 
-	app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
 	app.setGlobalPrefix(globalPrefix);
+	app.useGlobalPipes(new ValidationPipe({ whitelist: true }));
 	app.use(cookieParser());
 
 	const port = configService.getOrThrow('PORT');
