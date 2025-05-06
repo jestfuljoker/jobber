@@ -1,9 +1,9 @@
 import { DiscoveryModule } from '@golevelup/nestjs-discovery';
 import { Module } from '@nestjs/common';
 
-import { FibonacciJob } from '~/app/jobs/fibonacci.job';
-import { JobsResolver } from '~/app/jobs/jobs.resolver';
-import { JobsService } from '~/app/jobs/jobs.service';
+import { FibonacciJob } from '~/jobs/app/jobs/fibonacci.job';
+import { JobsResolver } from '~/jobs/app/jobs/jobs.resolver';
+import { JobsService } from '~/jobs/app/jobs/jobs.service';
 
 @Module({
 	imports: [DiscoveryModule],

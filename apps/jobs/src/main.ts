@@ -3,7 +3,7 @@ import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import cookieParser from 'cookie-parser';
 
-import { AppModule } from '~/app/app.module';
+import { AppModule } from '~/jobs/app/app.module';
 
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule);

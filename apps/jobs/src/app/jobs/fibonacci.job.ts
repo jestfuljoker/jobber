@@ -1,5 +1,5 @@
-import { Job } from '~/app/decorators/job.decorator';
-import { AbstractJob } from '~/app/jobs/abstract.job';
+import { Job } from '~/jobs/app/decorators/job.decorator';
+import { AbstractJob } from '~/jobs/app/jobs/abstract.job';
 
 @Job({
 	name: 'Fibonacci',

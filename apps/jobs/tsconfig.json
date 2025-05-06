@@ -11,15 +11,6 @@
 		}
 	],
 	"compilerOptions": {
-		"esModuleInterop": true,
-		"paths": {
-			"~/*": [
-				"src/*"
-			],
-			"@jobber/nestjs": [
-				"../../libs/nestjs/src/index.ts"
-			]
-		},
-		"baseUrl": "."
+		"esModuleInterop": true
 	}
 }

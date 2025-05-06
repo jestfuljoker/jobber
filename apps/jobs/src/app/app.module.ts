@@ -3,7 +3,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 
-import { JobsModule } from '~/app/jobs/jobs.module';
+import { JobsModule } from '~/jobs/app/jobs/jobs.module';
 
 @Module({
 	imports: [

@@ -4,9 +4,9 @@ import { JwtService } from '@nestjs/jwt';
 import { compare } from 'bcryptjs';
 import { Response } from 'express';
 
-import { LoginInput } from '~/app/auth/dto/login.input';
-import { TokenPayload } from '~/app/auth/interfaces/token-payload.interface';
-import { UsersService } from '~/app/users/users.service';
+import { LoginInput } from '~/auth/app/auth/dto/login.input';
+import { TokenPayload } from '~/auth/app/auth/interfaces/token-payload.interface';
+import { UsersService } from '~/auth/app/users/users.service';
 
 @Injectable()
 export class AuthService {
