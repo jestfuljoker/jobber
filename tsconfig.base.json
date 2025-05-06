@@ -15,10 +15,10 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
-			"~/auth/*": ["apps/auth/src/*"],
 			"~/jobber/nestjs": ["libs/nestjs/src/index.ts"],
 			"~/jobber/types/*": ["types/*.ts"],
-			"~/jobs/*": ["apps/jobs/src/*"]
+			"~/ms-auth/*": ["apps/auth/src/*"],
+			"~/ms-jobs/*": ["apps/jobs/src/*"]
 		}
 	},
 	"exclude": ["node_modules", "tmp"]

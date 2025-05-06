@@ -1,9 +1,9 @@
 import { DiscoveredClassWithMeta, DiscoveryService } from '@golevelup/nestjs-discovery';
 import { BadRequestException, Injectable, OnModuleInit } from '@nestjs/common';
 
-import { JOB_METADATA_KEY } from '~/jobs/app/decorators/job.decorator';
-import { JobMetadata } from '~/jobs/app/interfaces/job-metadata.interface';
-import { AbstractJob } from '~/jobs/app/jobs/abstract.job';
+import { JOB_METADATA_KEY } from '~/ms-jobs/app/decorators/job.decorator';
+import { JobMetadata } from '~/ms-jobs/app/interfaces/job-metadata.interface';
+import { AbstractJob } from '~/ms-jobs/app/jobs/abstract.job';
 
 @Injectable()
 export class JobsService implements OnModuleInit {

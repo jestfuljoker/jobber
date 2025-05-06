@@ -1,8 +1,8 @@
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 
-import { ExecuteJobInput } from '~/jobs/app/jobs/dto/execute-job.input';
-import { JobsService } from '~/jobs/app/jobs/jobs.service';
-import { Job } from '~/jobs/app/jobs/models/job.model';
+import { ExecuteJobInput } from '~/ms-jobs/app/jobs/dto/execute-job.input';
+import { JobsService } from '~/ms-jobs/app/jobs/jobs.service';
+import { Job } from '~/ms-jobs/app/jobs/models/job.model';
 
 @Resolver()
 export class JobsResolver {

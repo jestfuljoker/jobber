@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 
-import { UsersResolver } from '~/auth/app/users/users.resolver';
-import { UsersService } from '~/auth/app/users/users.service';
+import { UsersResolver } from '~/ms-auth/app/users/users.resolver';
+import { UsersService } from '~/ms-auth/app/users/users.service';
 describe('UsersResolver', () => {
 	let resolver: UsersResolver;
 

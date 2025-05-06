@@ -2,9 +2,9 @@ import { Injectable } from '@nestjs/common';
 import { Prisma } from '@prisma-clients/auth';
 import { hash } from 'bcryptjs';
 
-import { PrismaService } from '~/auth/app/prisma/prisma.service';
-import { CreateUserInput } from '~/auth/app/users/dto/create-user.input';
-import { User } from '~/auth/app/users/models/user.model';
+import { PrismaService } from '~/ms-auth/app/prisma/prisma.service';
+import { CreateUserInput } from '~/ms-auth/app/users/dto/create-user.input';
+import { User } from '~/ms-auth/app/users/models/user.model';
 
 @Injectable()
 export class UsersService {

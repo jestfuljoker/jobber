@@ -2,10 +2,11 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 
-import { AuthResolver } from '~/auth/app/auth/auth.resolver';
-import { AuthService } from '~/auth/app/auth/auth.service';
-import { JwtStrategy } from '~/auth/app/auth/strategies/jwt.strategy';
-import { UsersModule } from '~/auth/app/users/users.module';
+import { AuthController } from '~/ms-auth/app/auth/auth.controller';
+import { AuthResolver } from '~/ms-auth/app/auth/auth.resolver';
+import { AuthService } from '~/ms-auth/app/auth/auth.service';
+import { JwtStrategy } from '~/ms-auth/app/auth/strategies/jwt.strategy';
+import { UsersModule } from '~/ms-auth/app/users/users.module';
 
 @Module({
 	imports: [
@@ -23,5 +24,6 @@ import { UsersModule } from '~/auth/app/users/users.module';
 		UsersModule,
 	],
 	providers: [AuthResolver, AuthService, JwtStrategy],
+	controllers: [AuthController],
 })
 export class AuthModule {}
