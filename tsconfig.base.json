@@ -10,16 +10,30 @@
 		"importHelpers": true,
 		"target": "es2015",
 		"module": "esnext",
-		"lib": ["es2020", "dom"],
+		"lib": [
+			"es2020",
+			"dom"
+		],
 		"skipLibCheck": true,
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
-			"@jobber/nestjs": ["libs/nestjs/src/index.ts"],
-			"@jobber/types/*": ["types/*.ts"],
-			"~/auth/*": ["apps/auth/src/*"],
-			"~/jobs/*": ["apps/jobs/src/*"]
+			"~/jobber/nestjs": [
+				"libs/nestjs/src/index.ts"
+			],
+			"~/jobber/types/*": [
+				"types/*.ts"
+			],
+			"~/auth/*": [
+				"apps/auth/src/*"
+			],
+			"~/jobs/*": [
+				"apps/jobs/src/*"
+			]
 		}
 	},
-	"exclude": ["node_modules", "tmp"]
+	"exclude": [
+		"node_modules",
+		"tmp"
+	]
 }
