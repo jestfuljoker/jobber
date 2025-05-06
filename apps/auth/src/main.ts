@@ -1,3 +1,5 @@
+import { join } from 'node:path';
+
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
@@ -19,13 +21,17 @@ async function bootstrap() {
 
 	const port = configService.getOrThrow('PORT');
 
-	await app.listen(port);
 	app.connectMicroservice<GrpcOptions>({
 		transport: Transport.GRPC,
 		options: {
 			package: AUTH_PACKAGE_NAME,
+			protoPath: join(__dirname, 'proto', 'auth.proto'),
 		},
 	});
+
+	await app.startAllMicroservices();
+
+	await app.listen(port);
 
 	Logger.log(`🚀 Application is running on: http://localhost:${port}/${globalPrefix}`);
 }
