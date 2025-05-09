@@ -16,6 +16,7 @@
 		"baseUrl": ".",
 		"typeRoots": ["./types", "./node_modules/@types"],
 		"paths": {
+			"~/jobber/pulsar": ["libs/pulsar/src/index.ts"],
 			"~/jobber/nestjs": ["libs/nestjs/src/index.ts"],
 			"~/jobber/types/*": ["types/*.ts"],
 			"~/ms-auth/*": ["apps/auth/src/*"],

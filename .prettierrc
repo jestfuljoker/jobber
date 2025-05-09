@@ -1,11 +1,19 @@
 {
-  "singleQuote": true,
-  "arrowParens": "always",
-  "endOfLine": "auto",
-  "jsxSingleQuote": false,
-  "printWidth": 100,
-  "semi": true,
-  "tabWidth": 2,
-  "trailingComma": "all",
-  "useTabs": true
+	"singleQuote": true,
+	"arrowParens": "always",
+	"endOfLine": "auto",
+	"jsxSingleQuote": false,
+	"printWidth": 100,
+	"semi": true,
+	"tabWidth": 2,
+	"trailingComma": "all",
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": "*.yaml",
+			"options": {
+				"useTabs": false
+			}
+		}
+	]
 }
