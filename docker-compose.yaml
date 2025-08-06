@@ -3,6 +3,7 @@ name: jobber
 services:
   postgres:
     image: postgres
+    container_name: jobber_db
     ports:
       - 5432:5432
     environment:
@@ -12,7 +13,10 @@ services:
 
   pulsar:
     image: apachepulsar/pulsar
+    container_name: jobber_pulsar
     command: >
-      /pulsar/bin/pulsar standalone
+      bin/pulsar standalone
     ports:
       - 6650:6650
+    environment:
+      - PULSAR_MEM=-Xms512m -Xmx512m -XX:MaxDirectMemorySize=1g

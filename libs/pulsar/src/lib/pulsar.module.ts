@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 
-import { PulsarClient } from './pulsar.client';
+import { PulsarClient } from '~/jobber/pulsar';
 
 @Module({
 	controllers: [],
